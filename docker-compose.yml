@@ -1,0 +1,12 @@
+
+services:
+  db:
+    image: postgres
+    restart: always
+    shm_size: 128mb
+    environment:
+      POSTGRES_USER: sbd2
+      POSTGRES_PASSWORD: sbd2123
+      POSTGRES_DB: db_sbd
+    ports:
+      - "5432:5432"
