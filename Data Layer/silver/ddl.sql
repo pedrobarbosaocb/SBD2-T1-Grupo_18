@@ -3,17 +3,17 @@
 -- Camada Silver - Dados limpos e validados do Instagram
 -- ============================================================================
 
-CREATE SCHEMA IF NOT EXISTS instagram_usage;
+CREATE SCHEMA IF NOT EXISTS silver;
 
 -- Comentário no schema
-COMMENT ON SCHEMA instagram_usage IS 'Camada Silver - Dados limpos e validados';
+COMMENT ON SCHEMA silver IS 'Camada Silver - Dados limpos e validados';
 
 -- ============================================================================
 -- TABELA: USER
 -- ============================================================================
-DROP TABLE IF EXISTS instagram_usage.user CASCADE;
+DROP TABLE IF EXISTS silver.users CASCADE;
 
-CREATE TABLE user (
+CREATE TABLE silver.users (
     user_id BIGINT PRIMARY KEY,
     gender VARCHAR(20),
     age INT CHECK (age >= 0),
