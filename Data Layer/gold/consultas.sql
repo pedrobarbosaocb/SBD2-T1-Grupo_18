@@ -54,7 +54,6 @@ FROM dw.FT_ADS_PRF f
 JOIN dw.DIM_USR u ON f.SRK_USR = u.SRK_USR
 GROUP BY u.CTR_USR, u.GEN_USR
 ORDER BY total_cliques DESC
-LIMIT 10;
 
 
 
